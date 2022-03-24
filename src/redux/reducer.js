@@ -14,6 +14,7 @@ const initState = {
 };
 
 const rootReducer = (state = initState, action) => {
+	console.log({ state, action });
 	//  {
 	//type: 'todoList/addTodo'
 	//payload: {id: 3, name: 'Learn ReactJS', completed: false, priority: 'Medium'},
@@ -22,15 +23,7 @@ const rootReducer = (state = initState, action) => {
 		case "todoList/addTodo":
 			return {
 				...state,
-				todoList: [
-					...state.todoList,
-					{
-						id: 3,
-						name: "Learn ReactJS",
-						completed: false,
-						priority: "Medium",
-					},
-				],
+				todoList: [...state.todoList, action.payload],
 			};
 		default:
 			return state;
