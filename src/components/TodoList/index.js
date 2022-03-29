@@ -22,7 +22,7 @@ export default function TodoList() {
 		//dispatch
 		dispatch(
 			addTodo({
-				id: uuidv4,
+				id: uuidv4(),
 				name: todoName,
 				priority: priority,
 				completed: false,
