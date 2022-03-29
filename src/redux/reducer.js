@@ -14,7 +14,7 @@ const initState = {
 };
 
 const rootReducer = (state = initState, action) => {
-	console.log({ state, action });
+	//console.log({ state, action });
 	//  {
 	//type: 'todoList/addTodo'
 	//payload: {id: 3, name: 'Learn ReactJS', completed: false, priority: 'Medium'},
