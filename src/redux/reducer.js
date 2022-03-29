@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
 const initState = {
-	filter: {
+	filters: {
 		search: "",
 		status: "All",
 		priority: [],
@@ -24,6 +24,14 @@ const rootReducer = (state = initState, action) => {
 			return {
 				...state,
 				todoList: [...state.todoList, action.payload],
+			};
+		case "filters/searchFilterChange":
+			return {
+				...state,
+				filters: {
+					...state.filters,
+					search: action.payload,
+				},
 			};
 		default:
 			return state;
