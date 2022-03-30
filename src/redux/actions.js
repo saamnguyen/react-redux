@@ -31,3 +31,10 @@ export const priorityFilterChange = (priorities) => {
 		payload: priorities,
 	};
 };
+
+export const toggleTodoStatus = (todoId) => {
+	return {
+		type: "todoList/toggleTodoStatus",
+		payload: todoId,
+	};
+};

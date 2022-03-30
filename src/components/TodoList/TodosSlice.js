@@ -8,7 +8,12 @@ const todosListReducer = (state = initState, action) => {
 	switch (action.type) {
 		case "todoList/addTodo":
 			return [...state, action.payload];
-
+		case "todoList/toggleTodoStatus":
+			return state.map((todo) =>
+				todo.id === action.payload
+					? { ...state, completed: !todo.completed }
+					: todo
+			);
 		default:
 			return state;
 	}
