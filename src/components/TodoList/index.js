@@ -50,7 +50,12 @@ export default function TodoList() {
 				<Todo name="Learn Redux" prioriry="Medium" />
 				<Todo name="Learn JavaScript" prioriry="Low" /> */}
 				{todoList.map((todo, index) => (
-					<Todo name={todo.name} prioriry={todo.priority} key={todo.id}></Todo>
+					<Todo
+						name={todo.name}
+						prioriry={todo.priority}
+						key={todo.id}
+						completed={todo.completed}
+					></Todo>
 				))}
 			</Col>
 			<Col span={24}>
